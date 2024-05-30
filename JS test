@@ -1,0 +1,45 @@
+// Create a variable to hold your volleyball players
+let volleyballTeam = [];
+
+// This function will take in some values as parameters, create a
+// player object using the parameters passed to it for its metadata, 
+// and store it in the variable above.
+function addPlayer(name, position, spikes, blocks, matches, mvpAwards) {
+    let player = {
+        name: name,
+        position: position,
+        spikes: spikes,
+        blocks: blocks,
+        matches: matches,
+        mvpAwards: mvpAwards
+    };
+    volleyballTeam.push(player);
+}
+
+// Create a "loop" that will go through an "array" of players
+// and print their metadata with console.log()
+function listPlayers() {
+    for (let i = 0; i < volleyballTeam.length; i++) {
+        console.log("\n\n_____ PLAYER PROFILE _____\n\n");
+        console.log("Name: " + volleyballTeam[i].name);
+        console.log("Position: " + volleyballTeam[i].position);
+        console.log("Spikes: " + volleyballTeam[i].spikes);
+        console.log("Blocks: " + volleyballTeam[i].blocks);
+        console.log("Matches: " + volleyballTeam[i].matches);
+        console.log("MVP Awards: " + volleyballTeam[i].mvpAwards);
+        console.log("\n\n_____ * * * * * _____\n");
+    }
+}
+
+// Print the total number of players in the team to the console
+function getTotalPlayers() {
+    console.log("Total Players in the Team: " + volleyballTeam.length);
+}
+
+// Call your functions below this line
+addPlayer("Matthew Anderson", "Outside Hitter", 3500, 800, 300, 10);
+addPlayer("Max Holt", "Middle Blocker", 2000, 1500, 280, 5);
+addPlayer("Micah Christenson", "Setter", 500, 300, 250, 8);
+addPlayer("Aaron Russell", "Outside Hitter", 3200, 700, 270, 6);
+listPlayers();
+getTotalPlayers();
